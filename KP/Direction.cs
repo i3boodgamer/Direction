@@ -19,7 +19,7 @@ namespace KP
         public Direction(TextBox TB)
         {
             _ID = ++Counter;
-            _Name = "Дирекция";
+            _Name = "Дирекция " + _ID;
             _TB = TB;
             if (_TB != null) { TB.Clear(); }
         }
@@ -92,7 +92,7 @@ namespace KP
             return _Current == null;
         }
 
-        // Событие "дирекция свободна"
+        // Событие "Дирекция свободна"
         public event EventHandler<DirectionArgs> isFreeEvent;
 
         // Активация события "Дирекция свободна"
@@ -151,8 +151,31 @@ namespace KP
                             e.PrintResult(this + ". Закрыл сессию  - " + _Current.Student);
 
                         Student st = _Current.Student;
-                        if (isFinish != null)
-                            isFinish(_Current, e.Queues);
+                        if (isFinish != null && st.Requirement!=5)
+                        {
+                            if (st.Requirement == 1)
+                            {
+                                st.Requirement = 4;
+                            }
+                            else if (st.Requirement == 4)
+                            {
+                                int[] numbers = { 3, 5 };
+                                int index = new Random().Next(numbers.Length);
+                                int randomNumber = numbers[index];
+
+                                st.Requirement = randomNumber;
+                            }
+                            else if (st.Requirement == 3)
+                            {
+                                st.Requirement = 2;
+
+                            }
+                            else if (st.Requirement == 2)
+                            {
+                                st.Requirement = 4;
+                            }
+                            isFinish(_Current, e.Queues); // Отправляем студента в следующею очередь
+                        }
 
                         //Анулируемя время провождения в дирекции
                         st.Time = 0;

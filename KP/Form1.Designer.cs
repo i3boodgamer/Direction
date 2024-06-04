@@ -37,30 +37,32 @@
             this.NoAuto_RB = new System.Windows.Forms.RadioButton();
             this.Auto_RB = new System.Windows.Forms.RadioButton();
             this.Step_B = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Queue_GB = new System.Windows.Forms.GroupBox();
+            this.Queue2_L = new System.Windows.Forms.Label();
+            this.Queue4_L = new System.Windows.Forms.Label();
+            this.Queue3_L = new System.Windows.Forms.Label();
+            this.Queue5_L = new System.Windows.Forms.Label();
+            this.Queue1_L = new System.Windows.Forms.Label();
+            this.Mod_GB = new System.Windows.Forms.GroupBox();
+            this.Report_L = new System.Windows.Forms.Label();
+            this.Info_L = new System.Windows.Forms.Label();
+            this.Direction_L = new System.Windows.Forms.Label();
             this.Info_TB = new System.Windows.Forms.TextBox();
             this.Report_TB = new System.Windows.Forms.TextBox();
             this.Chance_NUD = new System.Windows.Forms.NumericUpDown();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.appearance_GB = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Count_NUD = new System.Windows.Forms.NumericUpDown();
             this.Report_B = new System.Windows.Forms.Button();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.Direction_TB = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.Direction_TB2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Queue_GB.SuspendLayout();
+            this.Mod_GB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chance_NUD)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.appearance_GB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Count_NUD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,121 +149,122 @@
             this.Step_B.UseVisualStyleBackColor = true;
             this.Step_B.Click += new System.EventHandler(this.Step_B_Click);
             // 
-            // groupBox1
+            // Queue_GB
             // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.Queue1_LB);
-            this.groupBox1.Controls.Add(this.Queue5_LB);
-            this.groupBox1.Controls.Add(this.Queue3_LB);
-            this.groupBox1.Controls.Add(this.Queue4_LB);
-            this.groupBox1.Controls.Add(this.Queue2_LB);
-            this.groupBox1.Location = new System.Drawing.Point(4, 129);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(979, 348);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Очереди";
+            this.Queue_GB.Controls.Add(this.Queue2_L);
+            this.Queue_GB.Controls.Add(this.Queue4_L);
+            this.Queue_GB.Controls.Add(this.Queue3_L);
+            this.Queue_GB.Controls.Add(this.Queue5_L);
+            this.Queue_GB.Controls.Add(this.Queue1_L);
+            this.Queue_GB.Controls.Add(this.Queue1_LB);
+            this.Queue_GB.Controls.Add(this.Queue5_LB);
+            this.Queue_GB.Controls.Add(this.Queue3_LB);
+            this.Queue_GB.Controls.Add(this.Queue4_LB);
+            this.Queue_GB.Controls.Add(this.Queue2_LB);
+            this.Queue_GB.Location = new System.Drawing.Point(4, 129);
+            this.Queue_GB.Margin = new System.Windows.Forms.Padding(2);
+            this.Queue_GB.Name = "Queue_GB";
+            this.Queue_GB.Padding = new System.Windows.Forms.Padding(2);
+            this.Queue_GB.Size = new System.Drawing.Size(979, 348);
+            this.Queue_GB.TabIndex = 11;
+            this.Queue_GB.TabStop = false;
+            this.Queue_GB.Text = "Очереди";
             // 
-            // label7
+            // Queue2_L
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(794, 47);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 15);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Очередь 2";
+            this.Queue2_L.AutoSize = true;
+            this.Queue2_L.Location = new System.Drawing.Point(794, 47);
+            this.Queue2_L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Queue2_L.Name = "Queue2_L";
+            this.Queue2_L.Size = new System.Drawing.Size(67, 15);
+            this.Queue2_L.TabIndex = 20;
+            this.Queue2_L.Text = "Очередь 2";
             // 
-            // label6
+            // Queue4_L
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(597, 47);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 15);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Очередь 4";
+            this.Queue4_L.AutoSize = true;
+            this.Queue4_L.Location = new System.Drawing.Point(597, 47);
+            this.Queue4_L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Queue4_L.Name = "Queue4_L";
+            this.Queue4_L.Size = new System.Drawing.Size(67, 15);
+            this.Queue4_L.TabIndex = 19;
+            this.Queue4_L.Text = "Очередь 4";
             // 
-            // label5
+            // Queue3_L
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(401, 47);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Очередь 3";
+            this.Queue3_L.AutoSize = true;
+            this.Queue3_L.Location = new System.Drawing.Point(401, 47);
+            this.Queue3_L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Queue3_L.Name = "Queue3_L";
+            this.Queue3_L.Size = new System.Drawing.Size(67, 15);
+            this.Queue3_L.TabIndex = 18;
+            this.Queue3_L.Text = "Очередь 3";
             // 
-            // label4
+            // Queue5_L
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(202, 47);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Очередь 5";
+            this.Queue5_L.AutoSize = true;
+            this.Queue5_L.Location = new System.Drawing.Point(202, 47);
+            this.Queue5_L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Queue5_L.Name = "Queue5_L";
+            this.Queue5_L.Size = new System.Drawing.Size(67, 15);
+            this.Queue5_L.TabIndex = 17;
+            this.Queue5_L.Text = "Очередь 5";
             // 
-            // label3
+            // Queue1_L
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 47);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Очередь 1";
+            this.Queue1_L.AutoSize = true;
+            this.Queue1_L.Location = new System.Drawing.Point(5, 47);
+            this.Queue1_L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Queue1_L.Name = "Queue1_L";
+            this.Queue1_L.Size = new System.Drawing.Size(67, 15);
+            this.Queue1_L.TabIndex = 16;
+            this.Queue1_L.Text = "Очередь 1";
             // 
-            // groupBox2
+            // Mod_GB
             // 
-            this.groupBox2.Controls.Add(this.Auto_RB);
-            this.groupBox2.Controls.Add(this.Step_B);
-            this.groupBox2.Controls.Add(this.NoAuto_RB);
-            this.groupBox2.Location = new System.Drawing.Point(374, 531);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(187, 82);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Режимы";
+            this.Mod_GB.Controls.Add(this.Auto_RB);
+            this.Mod_GB.Controls.Add(this.Step_B);
+            this.Mod_GB.Controls.Add(this.NoAuto_RB);
+            this.Mod_GB.Location = new System.Drawing.Point(374, 531);
+            this.Mod_GB.Margin = new System.Windows.Forms.Padding(2);
+            this.Mod_GB.Name = "Mod_GB";
+            this.Mod_GB.Padding = new System.Windows.Forms.Padding(2);
+            this.Mod_GB.Size = new System.Drawing.Size(187, 82);
+            this.Mod_GB.TabIndex = 12;
+            this.Mod_GB.TabStop = false;
+            this.Mod_GB.Text = "Режимы";
             // 
-            // label1
+            // Report_L
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1016, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Отчет";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.Report_L.AutoSize = true;
+            this.Report_L.Location = new System.Drawing.Point(1016, 68);
+            this.Report_L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Report_L.Name = "Report_L";
+            this.Report_L.Size = new System.Drawing.Size(43, 15);
+            this.Report_L.TabIndex = 14;
+            this.Report_L.Text = "Отчет";
+            this.Report_L.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // Info_L
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 500);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 15);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Информация о действиях";
+            this.Info_L.AutoSize = true;
+            this.Info_L.Location = new System.Drawing.Point(7, 500);
+            this.Info_L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Info_L.Name = "Info_L";
+            this.Info_L.Size = new System.Drawing.Size(159, 15);
+            this.Info_L.TabIndex = 15;
+            this.Info_L.Text = "Информация о действиях";
             // 
-            // label8
+            // Direction_L
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(230, 42);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 15);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Дирекция";
+            this.Direction_L.AutoSize = true;
+            this.Direction_L.Location = new System.Drawing.Point(33, 42);
+            this.Direction_L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Direction_L.Name = "Direction_L";
+            this.Direction_L.Size = new System.Drawing.Size(64, 15);
+            this.Direction_L.TabIndex = 21;
+            this.Direction_L.Text = "Дирекция";
+            this.Direction_L.Click += new System.EventHandler(this.Direction_L_Click);
             // 
             // Info_TB
             // 
@@ -284,6 +287,11 @@
             // Chance_NUD
             // 
             this.Chance_NUD.Location = new System.Drawing.Point(185, 22);
+            this.Chance_NUD.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.Chance_NUD.Minimum = new decimal(new int[] {
             2,
             0,
@@ -299,21 +307,21 @@
             0});
             this.Chance_NUD.ValueChanged += new System.EventHandler(this.Chance_NUD_ValueChanged);
             // 
-            // groupBox3
+            // appearance_GB
             // 
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.Chance_NUD);
-            this.groupBox3.Controls.Add(this.Count_NUD);
-            this.groupBox3.Location = new System.Drawing.Point(592, 533);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(273, 80);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Режимы";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            this.appearance_GB.Controls.Add(this.label10);
+            this.appearance_GB.Controls.Add(this.label9);
+            this.appearance_GB.Controls.Add(this.Chance_NUD);
+            this.appearance_GB.Controls.Add(this.Count_NUD);
+            this.appearance_GB.Location = new System.Drawing.Point(592, 533);
+            this.appearance_GB.Margin = new System.Windows.Forms.Padding(2);
+            this.appearance_GB.Name = "appearance_GB";
+            this.appearance_GB.Padding = new System.Windows.Forms.Padding(2);
+            this.appearance_GB.Size = new System.Drawing.Size(273, 80);
+            this.appearance_GB.TabIndex = 13;
+            this.appearance_GB.TabStop = false;
+            this.appearance_GB.Text = "Появление";
+            this.appearance_GB.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label10
             // 
@@ -376,38 +384,60 @@
             // 
             // Direction_TB
             // 
-            this.Direction_TB.Location = new System.Drawing.Point(233, 60);
+            this.Direction_TB.Location = new System.Drawing.Point(36, 60);
             this.Direction_TB.Multiline = true;
             this.Direction_TB.Name = "Direction_TB";
-            this.Direction_TB.Size = new System.Drawing.Size(459, 64);
+            this.Direction_TB.Size = new System.Drawing.Size(301, 64);
             this.Direction_TB.TabIndex = 24;
+            // 
+            // Direction_TB2
+            // 
+            this.Direction_TB2.Location = new System.Drawing.Point(387, 60);
+            this.Direction_TB2.Multiline = true;
+            this.Direction_TB2.Name = "Direction_TB2";
+            this.Direction_TB2.Size = new System.Drawing.Size(342, 64);
+            this.Direction_TB2.TabIndex = 25;
+            this.Direction_TB2.TextChanged += new System.EventHandler(this.Direction_TB2_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(384, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Дирекция";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1352, 792);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Direction_TB2);
             this.Controls.Add(this.Direction_TB);
             this.Controls.Add(this.Report_B);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.appearance_GB);
             this.Controls.Add(this.Report_TB);
             this.Controls.Add(this.Info_TB);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.Direction_L);
+            this.Controls.Add(this.Info_L);
+            this.Controls.Add(this.Report_L);
+            this.Controls.Add(this.Queue_GB);
+            this.Controls.Add(this.Mod_GB);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Queue_GB.ResumeLayout(false);
+            this.Queue_GB.PerformLayout();
+            this.Mod_GB.ResumeLayout(false);
+            this.Mod_GB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chance_NUD)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.appearance_GB.ResumeLayout(false);
+            this.appearance_GB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Count_NUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -423,26 +453,28 @@
         private System.Windows.Forms.RadioButton NoAuto_RB;
         private System.Windows.Forms.RadioButton Auto_RB;
         private System.Windows.Forms.Button Step_B;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox Queue_GB;
+        private System.Windows.Forms.GroupBox Mod_GB;
+        private System.Windows.Forms.Label Report_L;
+        private System.Windows.Forms.Label Queue2_L;
+        private System.Windows.Forms.Label Queue4_L;
+        private System.Windows.Forms.Label Queue3_L;
+        private System.Windows.Forms.Label Queue5_L;
+        private System.Windows.Forms.Label Queue1_L;
+        private System.Windows.Forms.Label Info_L;
+        private System.Windows.Forms.Label Direction_L;
         public System.Windows.Forms.TextBox Info_TB;
         public System.Windows.Forms.TextBox Report_TB;
         private System.Windows.Forms.NumericUpDown Chance_NUD;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox appearance_GB;
         private System.Windows.Forms.NumericUpDown Count_NUD;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button Report_B;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.TextBox Direction_TB;
+        private System.Windows.Forms.TextBox Direction_TB2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
