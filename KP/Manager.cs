@@ -14,6 +14,7 @@ namespace KP
     {
         private List<Queue> Queues = new List<Queue>(); // Список очередей
         private List<LogItem> LogList = new List<LogItem>(); // Список приемов
+        private List<Direction> _direction = new List<Direction>();
 
         private Random rnd = new Random(); // Генерация случайных чисел
 
@@ -145,11 +146,19 @@ namespace KP
             Queues.Add(queue);
 
             NewStudent += queue.NewStudent;
+            foreach(Direction direction in _direction)
+            {
+                queue.SingleStudentEvent += direction.WaiteSingle;
+                direction.isFreeEvent += queue.SetDirection;
+                direction.isFinish += queue.SetQueueRun;
+            }
+            
         }
 
         public void AddDirection(Direction direction) // Метод добавление новой диреции
         {
             RunTimeEvent += direction.Step;
+            _direction.Add(direction);
 
             foreach (Queue queue in Queues)
             {
@@ -157,6 +166,7 @@ namespace KP
                 direction.isFreeEvent += queue.SetDirection;
                 direction.isFinish += queue.SetQueueRun;
             }
+            
             
         }
 

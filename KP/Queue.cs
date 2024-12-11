@@ -12,21 +12,18 @@ namespace KP
 {
     public class Queue
     {
-        private static int Counter;
         private int _ID;
         private Queue<Student> _Queue = new Queue<Student>(); // Списко студентов, находящийся в очереди
         private ListBox _LB;
-        private int _Requirement;
         private string _Name;
         
-        public Queue(int Requirement, ListBox LB)
+        public Queue(int ID, ListBox LB)
         {
-            _ID = ++Counter;
+            _ID = ID;
             _LB = LB;
-            _Requirement = Requirement;
-            _Name = "Очередь " + _ID + " -";
+            _Name = "Очередь " + _ID+ " -";
 
-            switch (_Requirement)
+            switch (_ID)
             {
                 case 1:
                     _Name += " получение допуска к сессии ";
@@ -53,23 +50,23 @@ namespace KP
             return _Name;
         }
 
-        public int QueueNumber
+        public int QueueCount
         {
-            get { return _ID; }
+            get { return _Queue.Count; }
         }
 
-        public int Requirement
+        public int ID
         {
-            get { return _Requirement; }
+            get { return _ID; }
             set
             {
                 if (value >= 1 || value <= 5)
                 {
-                    _Requirement = value;
+                    _ID = value;
                 }
                 else
                 {
-                    _Requirement = 1;
+                    _ID = 1;
                 }
             }
         }
@@ -92,7 +89,7 @@ namespace KP
         public void NewStudent(object s, StudentArgs e)
         {
            // Студент должен существовать и должен заходить в нужную очередь
-           if (e.Student != null && e.Student.Requirement == Requirement)
+           if (e.Student != null && e.Student.Requirement == 1)
            {
                 _Queue.Enqueue(e.Student);
                 if (_LB != null)
@@ -116,7 +113,7 @@ namespace KP
 
                 E.Student = _Queue.Dequeue();
                 _LB.Items.Remove(E.Student);
-
+               
                 if (e.PrintResult != null)
                     e.PrintResult(this + ". Ушел " + E.Student);
 
@@ -128,30 +125,30 @@ namespace KP
         // Обработка события "Окончание приёма"
         public void SetQueueRun(StudentArgs E, List<Queue> Q)
         {
-            if(E.Student != null && Q != null)
+            if (E.Student != null && Q != null && E.Student.Requirement == _ID)
             {
-                if (E.Student.Requirement == 1)
-                {
-                    E.Student.Requirement = 4;
-                }
-                else if (E.Student.Requirement == 4)
-                {
-                    int[] numbers = { 3, 5 };
-                    int index = new Random().Next(numbers.Length);
-                    int randomNumber = numbers[index];
+                // Добавление студента в очередь
+                _Queue.Enqueue(E.Student);
+                // Отображение в визуальном компоненте
+                if (_LB != null)
+                    _LB.Items.Add(E.Student);
+   
+                if (E.PrintResult != null)
+                    E.PrintResult(this + ". Добавлен " + E.Student);
 
-                    E.Student.Requirement = randomNumber;
-                }
-                else if (E.Student.Requirement == 3)
-                {
-                    E.Student.Requirement = 2;
+                E.Student = null;
 
-                }
-                else if (E.Student.Requirement == 2)
-                {
-                    E.Student.Requirement = 4;
-                }
-                Q.ElementAt(E.Student.Requirement-1).NewStudent(this, E);
+                // Возможная активация события "Первый в очереди"
+                // Т.к задачи подразумевает преоритеты, нужно рассматривать наличие студентов в очередях,
+                // которые должны быть приняты первые
+                if (Q.ElementAt(1).QueueCount > 0)
+                    OnSingleStudent(E.PrintResult);
+                else if(Q.ElementAt(2).QueueCount > 0)
+                    OnSingleStudent(E.PrintResult);
+                else if (Q.ElementAt(3).QueueCount > 0)
+                    OnSingleStudent(E.PrintResult);
+                else if (Q.ElementAt(4).QueueCount > 0)
+                    OnSingleStudent(E.PrintResult);
             }
         }
 

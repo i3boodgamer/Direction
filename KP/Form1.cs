@@ -36,14 +36,16 @@ namespace KP
             MainManager.Chance = Convert.ToInt32(Chance_NUD.Value);
             MainManager.CountStudent = Convert.ToInt32(Count_NUD.Value);
 
+            MainManager.AddDirection(new Direction(Direction_TB));
+            MainManager.AddDirection(new Direction(Direction_TB2));
 
             MainManager.AddQueue(new Queue(1, Queue1_LB));
-            MainManager.AddQueue(new Queue(2, Queue2_LB));
+            MainManager.AddQueue(new Queue(5, Queue5_LB));
             MainManager.AddQueue(new Queue(3, Queue3_LB));
             MainManager.AddQueue(new Queue(4, Queue4_LB));
-            MainManager.AddQueue(new Queue(5,  Queue5_LB));
+            MainManager.AddQueue(new Queue(2,  Queue2_LB));
 
-            MainManager.AddDirection(new Direction(Direction_TB));
+ 
 
             NoAuto_RB.Checked = true;
 
@@ -100,6 +102,21 @@ namespace KP
         private void Timer_Tick(object sender, EventArgs e)
         {
             MainManager.OnTimer();
+        }
+
+        private void Direction_L_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Direction_TB2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
